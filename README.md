@@ -27,7 +27,7 @@ To efficiently apply the rough kernel history term, we approximate the fractiona
 3. **Diffusion model training**:
    - Treat each price grid as a single-channel image and train a **variance-preserving diffusion model (UNet)** to learn the distribution of realistic surfaces.
 4. **Conditional sampling from partial observations**:
-   - Given **sparse observations** (subset of grid points), perform **guided reverse diffusion** to reconstruct a plausible **full surface** consistent with those observations.
+   - Given **sparse observations** (subset of grid points), perform **guided reverse diffusion** to reconstruct a plausible **full surface** consistent with those observations. This idea comes from DiffusionPDE paper.
 
 
 ## Quick Start
@@ -83,9 +83,7 @@ here’s a drop-in replacement with **4 images** (the fourth is the reconstructi
 
 
 ## Acknowledgements
-
-* Ma & Wu (2022), *A fast algorithm for simulation of rough volatility models*, Quantitative Finance. [https://doi.org/10.1080/14697688.2021.1970213](https://doi.org/10.1080/14697688.2021.1970213)
-* Bennedsen, Lunde & Pakkanen (2017), *Hybrid scheme for Brownian semistationary processes*, Finance and Stochastics. [https://link.springer.com/article/10.1007/s00780-017-0335-5](https://link.springer.com/article/10.1007/s00780-017-0335-5)
-* Li (2010), *A fast time stepping method for evaluating fractional integrals*, SIAM J. Sci. Comput. [https://epubs.siam.org/doi/10.1137/080736533](https://epubs.siam.org/doi/10.1137/080736533)
-
-
+- Ma & Wu (2022), *A fast algorithm for simulation of rough volatility models*, Quantitative Finance. https://doi.org/10.1080/14697688.2021.1970213  
+- Bennedsen, Lunde & Pakkanen (2017), *Hybrid scheme for Brownian semistationary processes*, Finance and Stochastics. https://link.springer.com/article/10.1007/s00780-017-0335-5  
+- Li (2010), *A fast time stepping method for evaluating fractional integrals*, SIAM J. Sci. Comput. https://epubs.siam.org/doi/10.1137/080736533  
+- **Huang, Yang, Wang, Park (2024)** — *DiffusionPDE: Generative PDE-Solving Under Partial Observation*, **NeurIPS 2024** (arXiv:2406.17763). https://arxiv.org/abs/2406.17763
