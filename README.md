@@ -9,7 +9,6 @@ This project uses a **Markov approximation of the rough Heston model** to **para
 
 **Foundation (rough Heston simulation).**  
 The GPU pricer follows the fast simulation approach for rough volatility introduced by **Ma & Wu (2022)** in *Quantitative Finance*: “A fast algorithm for simulation of rough volatility models.” We adopt the **Markov (multi-factor) approximation** of the fractional kernel to enable batched, vectorized simulation suitable for GPUs.  
-Link: https://doi.org/10.1080/14697688.2021.1970213
 
 For early times (near \(t=0\)), we improve accuracy using the **Hybrid Scheme** of **Bennedsen, Lunde & Pakkanen (2017)** for Brownian semistationary processes: approximate the kernel by a power law near zero and by a step function elsewhere.  
 
@@ -77,7 +76,7 @@ np.save("data/surfaces/example_surface.npy", surface)
   https://drive.google.com/file/d/1QYFffDV0qTrxt6Ix7rQq1Z4a3zEhYGHa/view?usp=sharing
 
 
-## Acknowledgements
+## Refrences
 - Ma & Wu (2022), *A fast algorithm for simulation of rough volatility models*, Quantitative Finance. https://doi.org/10.1080/14697688.2021.1970213  
 - Bennedsen, Lunde & Pakkanen (2017), *Hybrid scheme for Brownian semistationary processes*, Finance and Stochastics. https://link.springer.com/article/10.1007/s00780-017-0335-5  
 - Li (2010), *A fast time stepping method for evaluating fractional integrals*, SIAM J. Sci. Comput. https://epubs.siam.org/doi/10.1137/080736533  
