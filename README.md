@@ -31,12 +31,6 @@ To efficiently apply the rough kernel history term, we approximate the fractiona
 
 
 ## Quick Start
-> Adjust paths and hyperparameters to match your setup. Start small (smoke test), then scale up on GPU.
-
-```bash
-# 1) Install
-pip install -r requirements.txt
-````
 
 ```python
 # 2) Simulate a small surface (example)
@@ -65,21 +59,22 @@ np.save("data/surfaces/example_surface.npy", surface)
 ```
 
 
-here’s a drop-in replacement with **4 images** (the fourth is the reconstruction **error**). just paste this into your README:
-
-
-## Results (placeholders — add your figures)
+## Results
 
 | Observed points                                | Reconstruction (ours)                            | Ground truth                              | Error (ours vs. ground truth)               |
 | ---------------------------------------------- | ------------------------------------------------ | ----------------------------------------- | ------------------------------------------- |
 | <img src="figs\Option Price partial observation.png" width="220" alt="Observed 100 pts"/> | <img src="figs/Postorior sampling option price rHeston.png" width="220" alt="Reconstruction"/> | <img src="figs/Actual Option Prices rHeston.png" width="220" alt="Ground truth"/> | <img src="figs/Actual Option Prices rHeston.png" width="220" alt="Error heatmap"/> |
 
+## Pretrained Model & Datasets
 
+- **Pretrained diffusion checkpoint:**  
+  https://drive.google.com/file/d/1Qo_CeJ1kDT4jvWJJPP-R8QKCWT7At-9f/view?usp=sharing
 
+- **Dataset — 1,000,000 generated price surfaces (32×32):**  
+  https://drive.google.com/file/d/1QlQD9IoNztQnj0V93F9KgVsnPVd_j5M3/view?usp=sharing
 
-* Grid: **32×32** maturities $T$ and strikes $K$
-* Inference: **50** guided reverse-diffusion steps
-* Metric: relative MSE on the full grid (report your numbers here)
+- **Parameters for those surfaces (α, θ, ρ, V₀, κ, ν):**  
+  https://drive.google.com/file/d/1QYFffDV0qTrxt6Ix7rQq1Z4a3zEhYGHa/view?usp=sharing
 
 
 ## Acknowledgements
